@@ -7,7 +7,7 @@ public class Main {
         System.out.println("aaaaa");
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appText.xml");
 
-        Car car = context.getBean("", Car.class);
+        Car car = context.getBean("CAR", Car.class);
         System.out.println(car);
     }
 }

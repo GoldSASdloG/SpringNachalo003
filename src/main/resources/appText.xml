@@ -4,6 +4,27 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- bean definitions here -->
+    <bean id="kolesa" class="org.example.Wheel">
+        <constructor-arg name="count" value="6"/>
+        <constructor-arg name="diametr" value="21"/>
+    </bean>
 
+    <bean id="dvigatel" class="org.example.Engine">
+        <property name="countCilinder" value="5"/>
+        <property name="volume" value="2.5"/>
+        <property name="name" value="VOLVO"/>
+        <property name="power" value="249"/>
+    </bean>
+
+    <bean id="trans" class="org.example.Transmition">
+        <constructor-arg name="maxTransmission" value="6"/>
+        <constructor-arg name="name" value="Asin"/>
+    </bean>
+
+    <bean id="CAR" class="org.example.Car">
+        <property name="mark" value="VOLVO"/>
+        <property name="engine" ref="dvigatel"/>
+        <property name="transmition" ref="trans"/>
+        <property name="wheel" ref="kolesa"/>
+    </bean>
 </beans>
