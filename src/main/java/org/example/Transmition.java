@@ -10,5 +10,4 @@ import lombok.NoArgsConstructor;
 public class Transmition {
     private String name;
     private int maxTransmission;
-
 }

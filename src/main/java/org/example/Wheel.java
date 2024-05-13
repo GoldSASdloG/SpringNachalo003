@@ -10,5 +10,4 @@ import lombok.NoArgsConstructor;
 public class Wheel {
     private int count;
     private int diametr;
-
 }
