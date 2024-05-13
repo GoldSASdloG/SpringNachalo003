@@ -6,8 +6,14 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+
 public class Wheel {
     private int count;
     private int diametr;
+
+    public Wheel(int count, int diametr) {
+        System.out.println("колеса созданы!!!");
+        this.count = count;
+        this.diametr = diametr;
+    }
 }

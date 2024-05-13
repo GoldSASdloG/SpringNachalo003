@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <context:property-placeholder location="classpath:application.properties"/>
+
     <bean id="kolesa" class="org.example.Wheel">
-        <constructor-arg name="count" value="6"/>
-        <constructor-arg name="diametr" value="21"/>
+        <constructor-arg name="count" value="${kolesa.count}"/>
+        <constructor-arg name="diametr" value="${kolesa.value}"/>
     </bean>
 
     <bean id="dvigatel" class="org.example.Engine">
@@ -21,7 +24,7 @@
         <constructor-arg name="name" value="Asin"/>
     </bean>
 
-    <bean id="CAR" class="org.example.Car">
+    <bean id="car" class="org.example.Car">
         <property name="mark" value="VOLVO"/>
         <property name="engine" ref="dvigatel"/>
         <property name="transmition" ref="trans"/>
