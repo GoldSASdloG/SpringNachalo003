@@ -9,5 +9,13 @@ public class Main {
 
         Car car = context.getBean("car", Car.class);
         System.out.println(car);
+
+        Car car2 = context.getBean("car", Car.class);
+        System.out.println(car2);
+
+        System.out.println(car == car2);
+        System.out.println(car.equals(car2));
+
+        context.close();
     }
 }

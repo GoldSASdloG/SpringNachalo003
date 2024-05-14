@@ -18,5 +18,6 @@ public class Engine {
         this.power = power;
         this.countCilinder = countCilinder;
         this.volume = volume;
+        System.out.println("двигатель создан!");
     }
 }
