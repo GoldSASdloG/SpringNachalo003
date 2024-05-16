@@ -1,21 +1,15 @@
 package org.example;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
+       AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
+       Car car = context.getBean("car", Car.class);
 
-        Car car = context.getBean("car", Car.class);
-        System.out.println(car);
+       System.out.println(car);
 
-        Car car2 = context.getBean("car", Car.class);
-        System.out.println(car2);
-
-        System.out.println(car == car2);
-        System.out.println(car.equals(car2));
-
-        context.close();
+       context.close();
     }
 }
