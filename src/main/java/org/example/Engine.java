@@ -7,16 +7,16 @@ import org.springframework.stereotype.Component;
 
 @Data
 @NoArgsConstructor
-@Component
+//@Component
 
 public class Engine {
-    @Value("VOLVO")
+    @Value("${engine.name}")
     private String name;
-    @Value("249")
+    @Value("${engine.power}")
     private int power;
-    @Value("5")
+    @Value("${engine.countCilinder}")
     private int countCilinder;
-    @Value("2.5")
+    @Value("${engine.volume}")
     private double volume;
 
     public Engine(String name, int power, int countCilinder, double volume) {

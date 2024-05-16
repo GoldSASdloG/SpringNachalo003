@@ -20,9 +20,10 @@ public class ApplicationConfig {
     public Engine engine(){
         return new Engine();
     }
+
     @Bean
     @Scope(value = "prototype")
     public Car car(){
-        return new Car(wheel(), engine(), transmition(), car().getMark());
+        return new Car(wheel(), engine(), transmition());
     }
 }

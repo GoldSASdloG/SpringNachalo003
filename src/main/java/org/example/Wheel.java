@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Data
 @NoArgsConstructor
-@Component
+//@Component
 
 public class Wheel {
     @Value("${kolesa.count}")

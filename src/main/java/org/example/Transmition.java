@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 
 @Data
 @NoArgsConstructor
-@Component
+//@Component
 //@Scope(value = "prototype")
 
 public class Transmition {
-    @Value("VOLVO")
+    @Value("${transmition.name}")
     private String name;
     @Value("7")
     private int maxTransmission;
